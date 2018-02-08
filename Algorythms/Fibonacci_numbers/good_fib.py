@@ -1,15 +1,15 @@
 def fib(n):
-    if n >= 0 and n <= 1:
+    if n == 0:
+        return 0
+    if n == 1:
         return 1
 
-    numbers = []
-    numbers.append(1)
-    numbers.append(1)
+    f1, f2 = 0, 1
 
     for i in range(2, n + 1):
-        numbers.append(numbers[i - 1] + numbers[i - 2])
+        f1, f2 = f2, f1 + f2
 
-    return numbers[n]
+    return f2
 
 if __name__ == "__main__":
-    print(fib(30))
+    print(fib(121222))

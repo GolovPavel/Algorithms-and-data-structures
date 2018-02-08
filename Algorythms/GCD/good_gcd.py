@@ -2,8 +2,7 @@
 We will use lemma: if a >= b > 0, r = a mod b,
 then gcd(a, b) = gcd(a mod b, b)
 '''
-
-def gcd(a, b):
+def gcd1(a, b):
     if a == 0:
         return b
     elif b == 0:
@@ -14,7 +13,15 @@ def gcd(a, b):
         else:
             return gcd(a, b % a)
 
+'''
+Magic way :)
+'''
+def gcd2(a, b):
+    if a == 0 or b == 0:
+        return max(a, b)
+    return gcd2(b % a, a)
+
 
 if __name__ == "__main__":
     a, b = [int(x) for x in input().split()]
-    print(gcd(a, b))
+    print(gcd2(a, b))
