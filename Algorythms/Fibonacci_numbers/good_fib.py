@@ -1,3 +1,7 @@
+'''
+Speed - if numbers is big - O(n^2) (very complex addition opperation),
+else - O(n)
+'''
 def fib(n):
     if n == 0:
         return 0

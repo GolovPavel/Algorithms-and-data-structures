@@ -1,6 +1,7 @@
 '''
 We will use lemma: if a >= b > 0, r = a mod b,
 then gcd(a, b) = gcd(a mod b, b)
+Speed - log a + log b
 '''
 def gcd1(a, b):
     if a == 0:
