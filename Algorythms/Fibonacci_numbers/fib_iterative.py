@@ -3,10 +3,8 @@ Speed - if numbers is big - O(n^2) (very complex addition opperation),
 else - O(n)
 '''
 def fib(n):
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
+    if n <= 1:
+        return n
 
     f1, f2 = 0, 1
 
